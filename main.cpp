@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    cout << "Soft computing - TASK 1" << endl;
-    
+    std::cout << "Soft computing - TASK 1" << std::endl;
+
     return 0;
 }
