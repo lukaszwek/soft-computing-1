@@ -8,6 +8,7 @@
 
 class ActivationFunction{
 public:
-    virtual DataType execute(DataType x) = 0;
+    virtual DataType compute(DataType x) = 0;
+    virtual DataType computeDervative(DataType x) =0;
 };
 #endif //_SOFT_COMPUTING_1_ACTIVATIONFUNCTION_H_
