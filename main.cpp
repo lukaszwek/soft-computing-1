@@ -8,10 +8,12 @@ int main() {
     DataType inputs[][learningSetSize] =
             {
                     {1, 0, 0}, //1
-                    {0, 1, 0}, //2
-                    {0, 0, 1}, //3
+                    {0, 0, 0}, //0
+                    {0, 1, 0}, //1
+                    {0, 0, 0}, //0
+                    {0, 0, 1}, //1
             };
-    DataType desiredOutputs[] = {1, 2, 3};
+    DataType desiredOutputs[] = {1, 0, 1, 0, 1};
 
 
     std::vector<DataVector> learningInputs;
@@ -28,7 +30,7 @@ int main() {
     }
     std::cout << std::endl;
 
-    for(int i = 0; i < 30; ++i){
+    for(int i = 0; i < 100; ++i){
         for(int j=0; j< learningInputs.size(); ++j){
             neuron.train(learningInputs[j], desiredOutputs[j]);
         }
