@@ -3,3 +3,11 @@
 //
 
 #include "LinearFunction.h"
+
+DataType LinearFunction::compute(DataType x) {
+    return x;
+}
+
+DataType LinearFunction::computeDervative(DataType x) {
+    return 1;
+}

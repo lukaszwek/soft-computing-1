@@ -26,7 +26,9 @@ DataVector Neuron::train(DataVector const &inputs, DataType const &desiredOutput
     for(unsigned long i=0; i< inputs.size(); ++i){
         DataType outputError = desiredOutput-output(inputs);
         DataType x = inputs[i];
-        deltas[i]= learningRate * outputError * function->computeDervative(computeH(x)) * x;
+        DataType derivativeValue = function->computeDervative(computeH(x));
+        deltas[i] = learningRate * outputError * function->computeDervative(computeH(x)) * x;
+
         inputWeights[i] += deltas[i];
     }
     return deltas;
